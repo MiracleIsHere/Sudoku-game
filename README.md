@@ -1,5 +1,5 @@
 # Sudoku
-An Android app on Kotlin to play Sudoku
+An Android app on Kotlin to play Sudoku.
 ## Features
 * solver
 * pencil marks
