@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.PlaySudokuActivity">
+
+    <ImageButton
+        android:id="@+id/refreshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/create_new_sudoku"
+        app:layout_constraintBottom_toTopOf="@+id/oneButton"
+        app:layout_constraintEnd_toStartOf="@+id/clearButton"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@+id/oneButton"
+        app:layout_constraintTop_toTopOf="@+id/sudokuBoardView"
+        app:srcCompat="@drawable/refresh_black" />
+
+    <ImageButton
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/clear_board"
+        app:layout_constraintBottom_toBottomOf="@+id/refreshButton"
+        app:layout_constraintEnd_toStartOf="@+id/resolveButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/refreshButton"
+        app:layout_constraintTop_toTopOf="@+id/refreshButton"
+        app:srcCompat="@drawable/clear_black" />
+
+    <ImageButton
+        android:id="@+id/resolveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/solve_sudoku"
+        app:layout_constraintBottom_toBottomOf="@+id/clearButton"
+        app:layout_constraintEnd_toEndOf="@+id/threeButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/clearButton"
+        app:layout_constraintTop_toTopOf="@+id/clearButton"
+        app:srcCompat="@drawable/done_black" />
+
+    <com.example.sudoku.view.custom.SudokuBoardView
+        android:id="@+id/sudokuBoardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/oneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/_1"
+        app:layout_constraintBottom_toTopOf="@+id/fourButton"
+        app:layout_constraintEnd_toStartOf="@+id/twoButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/sudokuBoardView"
+        app:layout_constraintTop_toBottomOf="@+id/refreshButton" />
+
+    <Button
+        android:id="@+id/twoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_2"
+        app:layout_constraintBottom_toBottomOf="@+id/oneButton"
+        app:layout_constraintEnd_toStartOf="@+id/threeButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/oneButton"
+        app:layout_constraintTop_toTopOf="@+id/oneButton" />
+
+    <Button
+        android:id="@+id/threeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_3"
+        app:layout_constraintBottom_toBottomOf="@+id/twoButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/twoButton"
+        app:layout_constraintTop_toTopOf="@+id/twoButton" />
+
+    <Button
+        android:id="@+id/fourButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_4"
+        app:layout_constraintBottom_toTopOf="@+id/sevenButton"
+        app:layout_constraintEnd_toStartOf="@+id/fiveButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/oneButton"
+        app:layout_constraintTop_toBottomOf="@+id/oneButton" />
+
+    <Button
+        android:id="@+id/fiveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_5"
+        app:layout_constraintBottom_toBottomOf="@+id/fourButton"
+        app:layout_constraintEnd_toStartOf="@+id/sixButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fourButton"
+        app:layout_constraintTop_toTopOf="@+id/fourButton" />
+
+    <Button
+        android:id="@+id/sixButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_6"
+        app:layout_constraintBottom_toBottomOf="@+id/fiveButton"
+        app:layout_constraintEnd_toEndOf="@+id/threeButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fiveButton"
+        app:layout_constraintTop_toTopOf="@+id/fiveButton" />
+
+    <Button
+        android:id="@+id/sevenButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_7"
+        app:layout_constraintBottom_toTopOf="@+id/notesButton"
+        app:layout_constraintEnd_toStartOf="@+id/eightButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/fourButton"
+        app:layout_constraintTop_toBottomOf="@+id/fourButton" />
+
+    <Button
+        android:id="@+id/eightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_8"
+        app:layout_constraintBottom_toBottomOf="@+id/sevenButton"
+        app:layout_constraintEnd_toStartOf="@+id/nineButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sevenButton"
+        app:layout_constraintTop_toTopOf="@+id/sevenButton" />
+
+    <Button
+        android:id="@+id/nineButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_9"
+        app:layout_constraintBottom_toBottomOf="@+id/eightButton"
+        app:layout_constraintEnd_toEndOf="@+id/sixButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/eightButton"
+        app:layout_constraintTop_toTopOf="@+id/eightButton" />
+
+    <ImageButton
+        android:id="@+id/notesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/note_mode"
+        app:layout_constraintBottom_toBottomOf="@+id/sudokuBoardView"
+        app:layout_constraintEnd_toStartOf="@+id/undoButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/refreshButton"
+        app:layout_constraintTop_toBottomOf="@+id/sevenButton"
+        app:srcCompat="@drawable/edit_pen_black" />
+
+    <ImageButton
+        android:id="@+id/undoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/undo"
+        app:layout_constraintBottom_toBottomOf="@+id/notesButton"
+        app:layout_constraintEnd_toStartOf="@+id/deleteButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/notesButton"
+        app:layout_constraintTop_toTopOf="@+id/notesButton"
+        app:srcCompat="@drawable/undo_black" />
+
+    <ImageButton
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/delete_selected"
+        app:layout_constraintBottom_toBottomOf="@+id/undoButton"
+        app:layout_constraintEnd_toEndOf="@+id/resolveButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/undoButton"
+        app:layout_constraintTop_toTopOf="@+id/undoButton"
+        app:srcCompat="@drawable/delete_black" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
